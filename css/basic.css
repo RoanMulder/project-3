@@ -1,0 +1,142 @@
+/* General Styles */
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e4dede;
+}
+
+header {
+    position: relative;
+    background-color: #fff;
+    padding: 2vh;
+    display: flex;
+    justify-content: space-between; /* Distribute space between title and nav menu */
+    align-items: center;
+    height: auto;
+    box-shadow: 0 0 1vh rgba(0, 0, 0, 0.1);
+    margin: 2vh auto; /* Center horizontally by using auto */
+    border-radius: 20px;
+    width: 80%; /* Adjust as needed */
+}
+
+.nav-menu {
+    display: flex; /* Align items horizontally */
+    gap: 2.5vw; /* Space between nav items */
+    margin-right: 2vw;
+
+}
+a {
+    text-decoration: none;
+    color: #000; /* Example link color */
+    font-weight: bold;
+}
+
+.nav-item {
+    padding: 10px 20px; /* Add padding for better click area */
+    border-radius: 5px; /* Rounded corners for nav items */
+    background-color: #e4dede; /* Light green background for nav items */
+}
+
+.nav-item:hover {
+    background-color: #d3d3d3; /* Darker green background on hover */
+}
+
+.nav-link:hover {
+    color: #333; /* Example hover color */
+}
+
+/* Button Hover Effect */
+#button:hover {
+    cursor: pointer;
+    background-color: white;
+    border: none;
+}
+
+/* Footer Styling */
+footer {
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 4vh;
+    position: fixed; /* Changed from absolute to fixed */
+    bottom: 0;
+    width: 100%;
+}
+
+/* Logo Image Animation */
+img {
+    float: right;
+    margin-right: 8vh;
+    margin-top: 0;
+    width: 15%;
+    height: 15%;
+    /* Combine both animations into one */
+    animation: rotate-image 10s linear infinite, fade-in1 3s ease-in-out;
+}
+
+@keyframes fade-in1 {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes rotate-image {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* Header Title (h2) */
+h2 {
+    font-size: 3vh;
+    color: #000;
+    font-weight: bold;
+}
+
+/* Main container margin */
+main {
+    margin-top: 10vh;
+}
+
+/* Mobile-Specific Styles */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Stack title and nav vertically */
+        align-items: center;
+        padding: 10px;
+        margin: 0;
+    }
+
+    .nav-menu {
+        flex-direction: column; /* Stack nav items vertically */
+        gap: 10px; /* Space between nav items */
+    }
+
+    .nav-item {
+        padding: 10px 20px; /* Increased padding for mobile */
+        background-color: #e8f5e9; /* Light green background for nav items */
+    }
+
+    footer {
+        position: fixed; /* Ensure footer remains at bottom */
+        bottom: 0;
+        width: 100%;
+    }
+
+    img {
+        display: block;
+        margin: 2vh auto;
+        width: 50%;
+    }
+
+    h2 {
+        font-size: 2vh;
+    }
+}

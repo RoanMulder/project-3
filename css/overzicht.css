@@ -1,0 +1,142 @@
+/* Data Overview Table Styling */
+.container {
+    max-width: 1200px; /* Limit the width for better alignment on larger screens */
+    padding: 2rem; /* Use rem for more consistent padding */
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 2rem auto; /* Center the container */
+    animation: slide-left 1s ease-in-out;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+    border: 1px solid #ddd; /* Lighter border */
+}
+
+th, td {
+    padding: 1.5rem; /* Consistent padding */
+    border: 1px solid #ddd;
+    text-align: left;
+    font-size: 1rem;
+}
+
+th {
+    background-color: #f9f9f9;
+    color: #333;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f7f7f7; /* Zebra striping for rows */
+}
+
+tr:hover {
+    background-color: #e9e9e9; /* Hover effect for table rows */
+    transition: background-color 0.3s ease;
+}
+
+.backup {
+    padding: 10px 20px; /* Add padding for better click area */
+    border-radius: 5px; /* Rounded corners for nav items */
+    background-color: #e4dede; /* Light green background for nav items */
+    font-size: 0.9vw;
+    border: none;
+    color: #000;
+}
+
+.backup:hover {
+    background-color: #d3d3d3; /* Darker green background on hover */
+}
+
+.backup:hover {
+    color: #333; /* Example hover color */
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+pre {
+    background-color: #f4f4f4;
+    padding: 10px;
+    overflow: auto;
+}
+
+.pdf a{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #e4dede;
+    color: #000;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    border-color: 1px solid #fff;
+}
+
+.pdf a:hover {
+    background-color: #c8c3c3;
+}
+
+
+
+/* Fade-in Animation */
+@keyframes slide-left {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* Mobile-Specific Styles for Data Overview */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 1.5rem;
+        margin: 0 auto;
+    }
+
+    table {
+        width: 100%;
+        font-size: 0.9rem;
+    }
+
+    th, td {
+        padding: 1rem;
+    }
+}

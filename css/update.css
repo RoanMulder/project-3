@@ -1,0 +1,109 @@
+/* Form Container */
+.container {
+    background-color: #fcf7f7; /* Cream color */
+    border-radius: 12px; /* More rounded for a softer look */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Increased shadow for depth */
+    padding: 2.5rem; /* Increased padding */
+    max-width: 800px;
+    margin: 2.5rem auto; /* Center the container */
+    text-align: left;
+    font-family: 'Lucida Sans', 'Lucida Grande', Geneva, Verdana, sans-serif;
+}
+
+a {
+    text-align: center;
+    color: #388e3c; /* Match the dark green color */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #2c6b2f;
+}
+
+/* Form Elements */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; /* Increased gap for cleaner layout */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+    border: 1px solid #ddd;
+    border-radius: 6px; /* Slightly more rounded */
+    padding: 1rem; /* Increased padding for better touch experience */
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+textarea:focus {
+    border-color: #388e3c; /* Highlight border on focus */
+    outline: none; /* Remove default outline */
+}
+
+/* Submit Button */
+input[type="submit"] {
+    background-color: #388e3c; /* Dark green */
+    color: #fff;
+    border: none;
+    border-radius: 6px; /* Softer edges */
+    padding: 1.25rem; /* Increased padding for larger buttons */
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effect */
+}
+
+input[type="submit"]:hover {
+    background-color: #2c6b2f; /* Darker green on hover */
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+/* Label Styling */
+label {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+/* Return Button */
+.return-btn {
+    display: inline-block;
+    margin-top: 1.5rem;
+    text-decoration: none;
+    color: #388e3c;
+    border: 1px solid #388e3c;
+    border-radius: 6px;
+    padding: 0.75rem 1.5rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.return-btn:hover {
+    background-color: #388e3c;
+    color: #fff;
+}
+
+/* Responsive Form Styling */
+@media (max-width: 768px) {
+    .container {
+        padding: 1.5rem;
+        max-width: 90%;
+    }
+
+    input[type="submit"] {
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
+
+    .return-btn {
+        padding: 0.75rem;
+        font-size: 0.9rem;
+    }
+}
